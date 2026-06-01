@@ -15,6 +15,12 @@ const catalogItems = [
   { label: "Short Fajas", href: "https://w5qyug-cm.myshopify.com/collections/short-fajas" },
 ];
 
+const pageLinks = [
+  { label: "Postquirúrgicas", href: "#necesidad" },
+  { label: "Más Vendidas", href: "#bestsellers" },
+  { label: "Guía de Tallas", href: "#sizing" },
+];
+
 export default function Header() {
   return (
     <header className="site-header">
@@ -37,17 +43,19 @@ export default function Header() {
                 <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.4" />
               </svg>
             </button>
-            <div className="catalog-dropdown" role="menu">
+            <div className="catalog-dropdown">
               {catalogItems.map((item) => (
-                <a key={item.href} href={item.href} className="catalog-item" role="menuitem">
+                <a key={item.href} href={item.href} className="catalog-item">
                   {item.label}
                 </a>
               ))}
             </div>
           </div>
-          <a href="#necesidad" className="nav-link">Postquirúrgicas</a>
-          <a href="#bestsellers" className="nav-link">Más Vendidas</a>
-          <a href="#sizing" className="nav-link">Guía de Tallas</a>
+          {pageLinks.map((item) => (
+            <a key={item.href} href={item.href} className="nav-link">
+              {item.label}
+            </a>
+          ))}
         </div>
         
         <div className="nav-right">
@@ -58,6 +66,35 @@ export default function Header() {
                 <path d="M14 14l3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
             </button>
+            <details className="mobile-menu">
+              <summary className="icon-btn mobile-menu-trigger" aria-label="Abrir menú">
+                <svg className="menu-open-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                  <path d="M4 7h14M4 11h14M4 15h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                </svg>
+                <svg className="menu-close-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                  <path d="M6.5 6.5l9 9M15.5 6.5l-9 9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                </svg>
+              </summary>
+              <div className="mobile-menu-panel">
+                <div className="mobile-menu-section">
+                  {pageLinks.map((item) => (
+                    <a key={item.href} href={item.href} className="mobile-menu-link">
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+                <div className="mobile-menu-section mobile-catalog-section">
+                  <div className="mobile-menu-title">Catálogo</div>
+                  <div className="mobile-catalog-grid">
+                    {catalogItems.map((item) => (
+                      <a key={item.href} href={item.href} className="mobile-catalog-link">
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </details>
             {/* <button className="icon-btn" aria-label="Cuenta">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <circle cx="10" cy="7" r="3" stroke="currentColor" strokeWidth="1.5" />
