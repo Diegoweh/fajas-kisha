@@ -1,5 +1,20 @@
 import Image from "next/image";
 
+const catalogItems = [
+  { label: "Bodys", href: "https://w5qyug-cm.myshopify.com/collections/bodys" },
+  { label: "Cinturillas", href: "https://w5qyug-cm.myshopify.com/collections/cinturillas" },
+  { label: "Corrector de Postura", href: "https://w5qyug-cm.myshopify.com/collections/corrector-de-postura" },
+  { label: "Especiales", href: "https://w5qyug-cm.myshopify.com/collections/especiales" },
+  { label: "Fajas Sin Costuras", href: "https://w5qyug-cm.myshopify.com/collections/fajas-sin-costuras" },
+  { label: "Línea Remodeladora", href: "https://w5qyug-cm.myshopify.com/collections/linea-remodeladora" },
+  { label: "Línea Caballero", href: "https://w5qyug-cm.myshopify.com/collections/linea-caballero" },
+  { label: "Línea Maternal", href: "https://w5qyug-cm.myshopify.com/collections/linea-maternal" },
+  { label: "Línea Reductiva", href: "https://w5qyug-cm.myshopify.com/collections/linea-redutiva" },
+  { label: "Línea Segunda Piel", href: "https://w5qyug-cm.myshopify.com/collections/linea-segunda-piel" },
+  { label: "Postquirúrgicos", href: "https://w5qyug-cm.myshopify.com/collections/postquirurgicos" },
+  { label: "Short Fajas", href: "https://w5qyug-cm.myshopify.com/collections/short-fajas" },
+];
+
 export default function Header() {
   return (
     <header className="site-header">
@@ -15,12 +30,21 @@ export default function Header() {
           />
         </a>
         <div className="nav-left">
-          <a href="#" className="nav-link has-drop">
-            Catálogo
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.4" />
-            </svg>
-          </a>
+          <div className="catalog-menu">
+            <button className="nav-link has-drop catalog-trigger" type="button" aria-haspopup="true">
+              Catálogo
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.4" />
+              </svg>
+            </button>
+            <div className="catalog-dropdown" role="menu">
+              {catalogItems.map((item) => (
+                <a key={item.href} href={item.href} className="catalog-item" role="menuitem">
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
           <a href="#necesidad" className="nav-link">Postquirúrgicas</a>
           <a href="#bestsellers" className="nav-link">Más Vendidas</a>
           <a href="#sizing" className="nav-link">Guía de Tallas</a>
