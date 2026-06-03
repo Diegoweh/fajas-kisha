@@ -4,24 +4,28 @@ const cards = [
     eyebrow: "Línea Postquirúrgica",
     title: "Recupérate con seguridad",
     meta: "Alta compresión · 22 modelos",
+    href: "https://w5qyug-cm.myshopify.com/collections/postquirurgicos",
   },
   {
     img: "/image/linea-reductiva.webp",
     eyebrow: "Bodys & Reductoras",
     title: "Realza tu silueta",
     meta: "Reloj de arena · 18 modelos",
+    href: "https://w5qyug-cm.myshopify.com/collections/linea-redutiva",
   },
   {
     img: "/image/linea-segunda-piel.webp",
     eyebrow: "Línea Control",
     title: "Uso diario, invisible",
     meta: "Sin costuras · 14 modelos",
+    href: "https://w5qyug-cm.myshopify.com/collections/linea-segunda-piel",
   },
   {
     img: "/image/linea-caballero.webp",
     eyebrow: "Línea Caballero",
     title: "Postura y figura",
     meta: "Camisetas · 6 modelos",
+    href: "https://w5qyug-cm.myshopify.com/collections/linea-caballero",
   },
 ];
 
@@ -38,7 +42,7 @@ export default function NeedsSection() {
         </div>
         <div className="necesidad-grid">
           {cards.map((c) => (
-            <a href="#" className="nec-card" key={c.title}>
+            <a href={c.href} className="nec-card" key={c.title}>
               <div className="nec-card-img" style={{ backgroundImage: `url('${c.img}')` }} />
               <div className="nec-card-content">
                 <span className="eyebrow">{c.eyebrow}</span>

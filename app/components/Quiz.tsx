@@ -49,12 +49,13 @@ const opciones: {
 
 const recommendations: Record<
   Objetivo,
-  { cat: string; title: string; img: string; price: string; priceOld: string; headline: string; sub: string }
+  { cat: string; title: string; img: string; href: string; price: string; priceOld: string; headline: string; sub: string }
 > = {
   postoperatorio: {
     cat: "Línea Postquirúrgica",
     title: "Body Reloj de Arena Postquirúrgico",
-    img: "https://fajaskisha.mx/wp-content/uploads/2025/05/dsc_3410-copia-460x460.jpeg",
+    img: "/image/body-reloj-arena.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/body-reloj-de-arena-postquirurgico?variant=44121708265560",
     price: "$2,464",
     priceOld: "$2,899",
     headline: "Tu recuperación, en tus manos.",
@@ -63,7 +64,8 @@ const recommendations: Record<
   reducir: {
     cat: "Cinturillas",
     title: "Cinturilla Segunda Piel",
-    img: "https://fajaskisha.mx/wp-content/uploads/2023/03/cinturilla-B-05.jpg",
+    img: "/image/cinturilla-segunda-piel.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/cinturilla-segunda-piel?_pos=1&_psq=cinturilla+se&_ss=e&_v=1.0",
     price: "$1,317",
     priceOld: "$1,550",
     headline: "Reduce y moldea, sin sacrificar comodidad.",
@@ -72,7 +74,8 @@ const recommendations: Record<
   diario: {
     cat: "Línea Control",
     title: "Short Curvy Tiro Alto",
-    img: "https://fajaskisha.mx/wp-content/uploads/2025/12/c640ad04-c79c-4797-8c36-53c57430e7d8-460x460.jpeg",
+    img: "/image/short-curvy-tiro-alto.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/short-curvy-tiro-alto?_pos=1&_psq=short+curvy&_ss=e&_v=1.0",
     price: "$1,954",
     priceOld: "$2,299",
     headline: "La silueta perfecta, todos los días.",
@@ -81,7 +84,8 @@ const recommendations: Record<
   postparto: {
     cat: "Línea Maternal",
     title: "Body Curvy Straples",
-    img: "https://fajaskisha.mx/wp-content/uploads/2025/12/post-de-instagram-kisha-45-2-460x460.png",
+    img: "/image/body-curvy-straples.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/body-curvy-straples?_pos=1&_psq=body+cu&_ss=e&_v=1.0",
     price: "$2,125",
     priceOld: "$2,500",
     headline: "Recupera tu figura, a tu ritmo.",
@@ -304,8 +308,12 @@ export default function Quiz() {
 
                   <div className="quiz-result-product">
                     <div className="quiz-result-img">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={rec.img} alt={rec.title} />
+                      <Image
+                        src={rec.img}
+                        alt={rec.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 100px"
+                      />
                     </div>
                     <div className="quiz-result-info">
                       <div className="product-cat">{rec.cat}</div>
@@ -321,7 +329,7 @@ export default function Quiz() {
                   </div>
 
                   <div className="quiz-result-actions">
-                    <a href="#" className="btn-primary">
+                    <a href={rec.href} className="btn-primary">
                       <span>Ver producto</span>
                       <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
                         <path d="M1 6h14m0 0L10 1m5 5l-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />

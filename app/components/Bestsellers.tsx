@@ -15,6 +15,7 @@ type Product = {
   msi: string;
   main: string;
   hover: string;
+  href: string;
   colors: string[];
   badges: { text: string; cls: string }[];
 };
@@ -31,6 +32,7 @@ const products: Product[] = [
     msi: "o 3 pagos de $821 sin intereses",
     main: "/image/body-reloj-arena.webp",
     hover: "/image/body-reloj-arena-2.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/body-reloj-de-arena-postquirurgico?variant=44121708265560",
     colors: ["#3D2818", "#1A1A1A"],
     badges: [
       { text: "Más vendido", cls: "badge-best" },
@@ -48,6 +50,7 @@ const products: Product[] = [
     msi: "o 3 pagos de $651 sin intereses",
     main: "/image/short-curvy-tiro-alto.webp",
     hover: "/image/short-curvy-tiro-alto-2.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/short-curvy-tiro-alto?_pos=1&_psq=short+curvy&_ss=e&_v=1.0",
     colors: ["#E8D5C4", "#1A1A1A"],
     badges: [{ text: "-15%", cls: "badge-sale" }],
   },
@@ -62,6 +65,7 @@ const products: Product[] = [
     msi: "o 3 pagos de $708 sin intereses",
     main: "/image/body-curvy-straples.webp",
     hover: "/image/body-curvy-straples-2.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/body-curvy-straples?_pos=1&_psq=body+cu&_ss=e&_v=1.0",
     colors: ["#E8D5C4", "#3D2818"],
     badges: [{ text: "Nuevo", cls: "badge-new" }],
   },
@@ -76,6 +80,7 @@ const products: Product[] = [
     msi: "o 3 pagos de $439 sin intereses",
     main: "/image/cinturilla-segunda-piel.webp",
     hover: "/image/cinturilla-segunda-piel-2.webp",
+    href: "https://w5qyug-cm.myshopify.com/products/cinturilla-segunda-piel?_pos=1&_psq=cinturilla+se&_ss=e&_v=1.0",
     colors: ["#E8D5C4", "#1A1A1A", "#8B5A3C"],
     badges: [
       { text: "Últimas piezas", cls: "badge-stock" },
@@ -120,7 +125,7 @@ export default function Bestsellers() {
         </div>
         <div className="products-grid">
           {list.map((p) => (
-            <a href="#" className="product-card" key={p.title}>
+            <a href={p.href} className="product-card" key={p.title}>
               <div className="product-img">
                 {/* <div className="product-badges">
                   {p.badges.map((b) => (
@@ -176,7 +181,7 @@ export default function Bestsellers() {
         </div>
 
         <div style={{ textAlign: "center", marginTop: 64 }}>
-          <a href="#" className="btn-secondary">Ver todas las fajas →</a>
+          <a href="https://w5qyug-cm.myshopify.com/collections/all" className="btn-secondary bestsellers-cta">Ver todas las fajas →</a>
         </div>
       </div>
     </section>
