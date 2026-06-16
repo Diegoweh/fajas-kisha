@@ -8,7 +8,7 @@ const cards = [
   },
   {
     img: "/image/linea-reductiva.webp",
-    eyebrow: "Bodys & Reductoras",
+    eyebrow: "Línea Reductiva",
     title: "Realza tu silueta",
     meta: "Reloj de arena · 18 modelos",
     href: "https://w5qyug-cm.myshopify.com/collections/linea-redutiva",

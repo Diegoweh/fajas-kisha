@@ -19,6 +19,7 @@ const pageLinks = [
   { label: "Postquirúrgicas", href: "#necesidad" },
   { label: "Más Vendidas", href: "#bestsellers" },
   { label: "Guía de Tallas", href: "#sizing" },
+  { label: "Contáctanos", href: "#contacto" },
 ];
 
 export default function Header() {

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="site-footer">
+    <footer id="contacto" className="site-footer">
       <div className="container-x">
         <div className="footer-top">
           <div>
@@ -20,10 +20,10 @@ export default function Footer() {
             <p className="footer-tag">
               Fajas colombianas con más de 20 años perfeccionando la compresión que tu cuerpo merece. Desde Mazatlán, para todo México.
             </p>
-            <form className="newsletter" onSubmit={(e) => e.preventDefault()}>
+            {/* <form className="newsletter" onSubmit={(e) => e.preventDefault()}>
               <input type="email" placeholder="tu@correo.com" />
               <button type="submit">Suscribirme</button>
-            </form>
+            </form> */}
           </div>
           <div className="footer-col">
             <h4>Tienda</h4>
