@@ -31,14 +31,14 @@ const cards = [
 
 export default function NeedsSection() {
   return (
-    <section id="necesidad" className="section-pad">
+    <section id="nosotros" className="section-pad">
       <div className="container-x">
         <div className="section-head">
-          <span className="eyebrow">Compra por necesidad</span>
+          <span className="eyebrow">Quiénes Somos</span>
           <h2 className="h-section">
-            Encuentra <em>tu razón</em> para usar Kisha
+            Somos <em>Kisha</em>
           </h2>
-          <p>No vendemos fajas. Acompañamos momentos. Elige la línea que se adapta a tu etapa.</p>
+          <p>Diseñamos fajas que acompañan cada etapa: de la recuperación al día a día. Compresión firme, ajuste real, confianza que se siente.</p>
         </div>
         <div className="necesidad-grid">
           {cards.map((c) => (
