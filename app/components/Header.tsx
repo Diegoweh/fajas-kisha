@@ -16,7 +16,7 @@ const catalogItems = [
 ];
 
 const pageLinks = [
-  { label: "Quienes Somos", href: "#nosotros" },
+  { label: "Quiénes Somos", href: "#nosotros" },
   { label: "Más Vendidas", href: "#bestsellers" },
   { label: "Guía de Tallas", href: "#sizing" },
   { label: "FAQs", href: "#faqs" },
