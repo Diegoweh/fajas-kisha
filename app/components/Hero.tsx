@@ -8,7 +8,7 @@ export default function Hero() {
           con maestría colombiana
         </h1>
         <p>
-          Fajas Kisha son diseñadas para acompañarte: postoperatorio, postparto o el día a día. 20 años perfeccionando la compresión que tu cuerpo merece.
+          Tu figura definida por expertos. En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.
         </p>
         <div className="hero-ctas">
           <a href="#bestsellers" className="btn-primary">
