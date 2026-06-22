@@ -5,10 +5,10 @@ export default function Hero() {
         <h1 className="h-display">
           Tu figura <em>definida</em>
           <br />
-          con maestría colombiana
+          por expertos
         </h1>
         <p>
-          Tu figura definida por expertos. En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.
+           En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.
         </p>
         <div className="hero-ctas">
           <a href="#bestsellers" className="btn-primary">
