@@ -38,7 +38,7 @@ export default function NeedsSection() {
           <h2 className="h-section">
             Somos <em>Kisha</em>
           </h2>
-          <p>Diseñamos fajas que acompañan cada etapa: de la recuperación al día a día. Compresión firme, ajuste real, confianza que se siente.</p>
+          <p>Desde 1992 Empresa líder Nacional en comercialización, distribución y fabricación de prendas de remodelación, control, reducción, maternidad y postoperatoria entre más, para dama y caballero.</p>
         </div>
         <div className="necesidad-grid">
           {cards.map((c) => (
