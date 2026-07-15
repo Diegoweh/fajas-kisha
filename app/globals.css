@@ -333,7 +333,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.1;colo
   max-width:480px;
   margin-bottom:40px;
 }
-.hero-ctas{display:flex;gap:16px;margin-bottom:0;flex-wrap:wrap}
+.hero-ctas{display:flex;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.hero-dots{display:flex;gap:10px}
+.hero-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:rgba(239,227,210,0.3);
+  border:none;padding:0;cursor:pointer;
+  transition:background .25s ease,transform .25s ease;
+}
+.hero-dot:hover{background:rgba(239,227,210,0.55)}
+.hero-dot.active{background:var(--copper);transform:scale(1.2)}
 .btn-primary{
   background:var(--cream);
   color:var(--ink);
