@@ -10,6 +10,7 @@ import StoreSection from "./components/StoreSection";
 import FaqSection from "./components/FaqSection";
 import Promises from "./components/Promises";
 import Footer from "./components/Footer";
+import PromoPopup from "./components/PromoPopup";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         {/* <Promises /> */}
       </main>
       <Footer />
+      <PromoPopup />
     </>
-  ); 
+  );
 }

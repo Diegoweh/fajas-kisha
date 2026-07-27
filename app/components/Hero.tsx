@@ -12,13 +12,13 @@ const slides = [
       </>
     ),
     text: "En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.",
-    image: "/image/women-2.webp",
+    image: "/image/women-4.webp",
     alt: "Modelo usando una faja colombiana Kisha",
   },
   {
     title: <>Promo Verano -15% de descuento comprando en la web</>,
     text: "En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.",
-    image: "/image/women-3.webp",
+    image: "/image/women-5.webp",
     alt: "Modelo usando una faja colombiana Kisha",
   },
 ];
