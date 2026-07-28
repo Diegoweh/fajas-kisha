@@ -52,7 +52,7 @@ export default function PromoPopup() {
           </svg>
         </button>
         <Image
-          src="/image/kisha-popup.webp"
+          src="/image/kisha-popup-v2.webp"
           alt="Promoción fajas Kisha"
           width={900}
           height={900}
