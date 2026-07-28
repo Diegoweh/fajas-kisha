@@ -12,14 +12,14 @@ const slides = [
       </>
     ),
     text: "En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.",
-    image: "/image/women-4.webp",
-    alt: "Modelo usando una faja colombiana Kisha",
+    desktop: "/image/banner-desckpot.webp",
+    mobile: "/image/banner-movil.webp",
   },
   {
     title: <>Promo Verano -15% de descuento comprando en la web</>,
     text: "En fajas Kisha diseñamos para acompañarte en todo momento. Postoperatorio, postparto reductivos y más. Más de 30 años perfeccionando el molde que tu cuerpo merece.",
-    image: "/image/women-5.webp",
-    alt: "Modelo usando una faja colombiana Kisha",
+    desktop: "/image/banner-desckpot-2.webp",
+    mobile: "/image/banner-movil-2.webp",
   },
 ];
 
@@ -36,7 +36,15 @@ export default function Hero() {
   const slide = slides[active];
 
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      style={
+        {
+          "--hero-bg-desktop": `url('${slide.desktop}')`,
+          "--hero-bg-mobile": `url('${slide.mobile}')`,
+        } as React.CSSProperties
+      }
+    >
       <div className="hero-content">
         <h1 className="h-display">{slide.title}</h1>
         <p>{slide.text}</p>
@@ -65,14 +73,6 @@ export default function Hero() {
             />
           ))}
         </div>
-      </div>
-      <div className="hero-visual">
-        <div
-          className="hero-img-wrap"
-          role="img"
-          aria-label={slide.alt}
-          style={{ backgroundImage: `url('${slide.image}')` }}
-        />
       </div>
     </section>
   );
